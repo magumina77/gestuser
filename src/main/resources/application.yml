@@ -1,0 +1,23 @@
+server:
+  port: 9091
+spring:
+  application:
+    name: GestUser
+
+ #============================================
+ #= PARAMETRI MYSQL
+ #============================================
+  datasource:
+    url: jdbc:mysql://docker-mysql:3306/msusers
+    username: root
+    password: test1234
+
+  #=============================================
+ #= CONFIGURAZIONE ACTUATOR LIVENESS READINESS
+ #=============================================
+management:
+  endpoint:
+    health:
+      enabled: true
+      probes:
+        enabled: true

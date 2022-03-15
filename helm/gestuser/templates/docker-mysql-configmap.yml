@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+    name: mysql-initdb-config
+data:
+    initdb.sql: |
+      use msusers;
+      create table utenti(id int AUTO_INCREMENT PRIMARY KEY,user_id varchar(80),password varchar(80),attivo varchar(2));
